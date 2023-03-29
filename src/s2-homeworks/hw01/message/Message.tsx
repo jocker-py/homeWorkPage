@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {FC} from 'react'
 import s from './Message.module.css'
 import {MessageType} from "../HW1";
 
@@ -6,7 +6,7 @@ import {MessageType} from "../HW1";
 export type MessagePropsType = { message: MessageType }
 
 // нужно отобразить приходящие данные
-const Message = (props: MessagePropsType) => {
+const Message: FC<MessagePropsType> = (props) => {
   return (
     <div id={'hw1-message-' + props.message.id} className={s.message}>
       <div className={s.imageAndText}>
