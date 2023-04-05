@@ -34,13 +34,14 @@
 }
 
 .text:after {
-    content: '';
+    content: "";
     position: absolute;
+    bottom: 0;
     right: -13px;
-    bottom: 0px;
-    border: 13px solid transparent;
-    border-bottom: 13px solid #0066CC;
-    border-left: 13px solid #0066CC;
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: radial-gradient(26px at top right, transparent 49%, #0066CC 51%) no-repeat right bottom;
 }
 
 .name {
