@@ -34,13 +34,14 @@
 }
 
 .friendText:before {
-    content: '';
+    content: "";
     position: absolute;
+    bottom: -2px;
     left: -14px;
-    bottom: 0px;
-    border: 14px solid #F5F7FB;
-    border-left: 14px solid transparent;
-    border-top: 14px solid transparent;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(28px at top left, transparent 49%, #F5F7FB 51%) no-repeat right bottom;
 }
 
 .friendName {
