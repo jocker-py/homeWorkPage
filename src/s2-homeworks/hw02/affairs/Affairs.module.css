@@ -2,6 +2,7 @@
     display: flex;
     gap: 24px;
     margin-bottom: 32px;
+    margin-top: 8px;
 }
 
 .all {
@@ -49,7 +50,9 @@
 
 .affairs {
     display: flex;
-    gap: 17px;
+    row-gap: 24px;
+    column-gap: 17px;
     flex-wrap: wrap;
     max-width: 450px;
+    padding-bottom: 41px;
 }
