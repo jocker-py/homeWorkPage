@@ -41,7 +41,7 @@ test("filter by all", () => {
 test("filter by high", () => {
   const newState = filterAffairs(initialState, "high");
   expect(newState.length).toBe(2);
-  expect(newState.every(item => item.priority === "high")).toBe(true);
+  expect(newState.every((item:AffairType) => item.priority === "high")).toBe(true);
   //first item
   expect(newState[0]._id).toBe(1);
   expect(newState[0].name).toBe("React");
@@ -54,7 +54,7 @@ test("filter by high", () => {
 test("filter by middle", () => {
   const newState = filterAffairs(initialState, "middle");
   expect(newState.length).toBe(1);
-  expect(newState.every(item => item.priority === "middle")).toBe(true);
+  expect(newState.every((item:AffairType) => item.priority === "middle")).toBe(true);
   //first item
   expect(newState[0]._id).toBe(5);
   expect(newState[0].name).toBe("html & css");
@@ -63,7 +63,7 @@ test("filter by middle", () => {
 test("filter by low", () => {
   const newState = filterAffairs(initialState, "low");
   expect(newState.length).toBe(2);
-  expect(newState.every(item => item.priority === "low")).toBe(true);
+  expect(newState.every((item:AffairType) => item.priority === "low")).toBe(true);
   //first item
   expect(newState[0]._id).toBe(2);
   expect(newState[0].name).toBe("anime");

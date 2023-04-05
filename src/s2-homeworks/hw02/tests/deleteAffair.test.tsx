@@ -20,20 +20,20 @@ test("delete 0", () => {
 test("delete 1", () => {
   const newState = deleteAffair(initialState, 1);
   expect(newState.length).toBe(4);
-  expect(newState.find(item => item._id === 1)).toBe(undefined);
+  expect(newState.find((item:AffairType) => item._id === 1)).toBe(undefined);
 });
 test("delete 3", () => {
   const newState = deleteAffair(initialState, 3);
   expect(newState.length).toBe(4);
-  expect(newState.find(item => item._id === 3)).toBe(undefined);
+  expect(newState.find((item:AffairType) => item._id === 3)).toBe(undefined);
 });
 test("delete 5", () => {
   const newState = deleteAffair(initialState, 5);
   expect(newState.length).toBe(4);
-  expect(newState.find(item => item._id === 5)).toBe(undefined);
+  expect(newState.find((item:AffairType) => item._id === 5)).toBe(undefined);
 });
 test("delete 6", () => {
   const newState = deleteAffair(initialState, 6);
   expect(newState.length).toBe(5);
-  expect(newState.find(item => item._id === 6)).toBe(undefined);
+  expect(newState.find((item:AffairType) => item._id === 6)).toBe(undefined);
 });
