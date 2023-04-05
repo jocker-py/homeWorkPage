@@ -39,8 +39,7 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): A
   return [...affairs].filter(item => filter === "all" ? true : filter === item.priority);
 };
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): any => {
-
-  return affairs;
+  return [...affairs].filter(item => item._id !== _id);
 };
 
 function HW2() {
