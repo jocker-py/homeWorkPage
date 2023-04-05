@@ -6,7 +6,7 @@ import s2 from "../Affairs.module.css";
 type AffairPropsType = {
   // key не нужно типизировать
   affair: AffairType
-  deleteAffairCallback: (_id:number) => void
+  deleteAffairCallback: (_id: number) => void
 }
 
 function Affair({affair, deleteAffairCallback}: AffairPropsType) {
@@ -25,7 +25,7 @@ function Affair({affair, deleteAffairCallback}: AffairPropsType) {
     >
       <div id={"hw2-name-" + affair._id} className={nameClass}>
         {/*создаёт студент*/}
-
+        {affair.name}
         {/**/}
       </div>
       <div id={"hw2-priority-" + affair._id} hidden>
