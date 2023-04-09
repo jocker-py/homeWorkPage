@@ -1,10 +1,10 @@
 import React, { ChangeEvent, KeyboardEvent, useState } from 'react'
 import Greeting from './Greeting'
-import { UserType } from './HW3'
+import {UsersType, UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: UsersType
+    addUserCallback: (name: string) => void
 }
 
 export const pureAddUser = (name: any, setError: any, setName: any, addUserCallback: any) => {
