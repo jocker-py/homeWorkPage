@@ -1,35 +1,92 @@
 .greetingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    align-items: flex-start;
+    row-gap: 10px;
+    column-gap: 12px;
 }
 
 .error {
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #cc0000;
+    font-weight: 400;
+    width: max-content;
 }
 
 .input {
+    width: 30vw;
+    max-width: 400px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    padding: 7px 12px;
 }
 
 .input:focus {
 }
 
 .errorInput {
+    border: 1px solid #cc0000;
 }
 
 .button {
+    background: #0066CC;
+    border-radius: 3px;
+    padding: 8px 24px;
+    font-size: 14px;
+    line-height: 20px;
+    border: none;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 600;
+    box-shadow: 0 1px 2px #212A34;
 }
 
-.button:focus {
+.button:focus, .button:active, .button:hover {
+    animation: pulse 1s linear infinite;
+    cursor: pointer;
 }
 
 .button:active {
 }
 
 .button:disabled {
+    cursor: not-allowed;
+    animation: none;
+    opacity: 0.5;
 }
 
 .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .greeting {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
 }
