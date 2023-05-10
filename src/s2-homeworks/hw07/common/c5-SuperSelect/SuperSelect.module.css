@@ -1,9 +1,20 @@
 .select {
+    outline: none;
+    width: 180px;
+    height: 25px;
+    padding: 2px 0 6px 10px;
+    font-size: 14px;
+    border-radius: 2px;
+    text-transform: capitalize;
+    background: #FFFFFF;
+    border: 1px solid #C2C2C2;
 }
 
 .select:focus {
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid #000000;
 }
 
-
-.option:hover {
-}
+/*.option:hover {*/
+/*}*/
