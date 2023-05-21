@@ -18,9 +18,11 @@
 
 .disabled, button:disabled {
     box-shadow: none;
-    background-color: #004D99;
-    color: #002E5C;
-    opacity: 0.5;
+    /*background-color: #004D99;*/
+    background-color: #0066CC;
+    /*color: #002E5C;*/
+    color: white;
+    opacity: 0.4;
 }
 
 .disabled:hover {
