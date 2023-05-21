@@ -26,7 +26,7 @@ function Clock() {
   };
 
   const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
-
+    setShow(true);
   };
   const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
 
