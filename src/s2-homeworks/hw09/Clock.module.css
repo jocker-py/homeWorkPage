@@ -1,14 +1,27 @@
 .buttonsContainer {
+    display: flex;
+    gap: 21px;
+    padding: 27px 0 201px;
 }
 
 .clock {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .watch {
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .watch strong {
+    font-weight: bold;
 }
 
 .more {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
 }
