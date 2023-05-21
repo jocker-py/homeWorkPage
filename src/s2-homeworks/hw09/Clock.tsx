@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import SuperButton from "../hw04/common/c2-SuperButton/SuperButton";
 import {restoreState} from "../hw06/localStorage/localStorage";
 import s from "./Clock.module.css";
+import formatDate from "./formatDate/formatDate";
 
 function Clock() {
   const getDateNow = () => new Date(restoreState("hw9-date", Date.now()));
@@ -32,7 +33,7 @@ function Clock() {
     setShow(false);
   };
 
-  const stringTime = "date->time" || <br/>; // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+  const stringTime = formatDate.getDoubleDotDate(date) || <br/>; // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
   const stringDate = "date->date" || <br/>; // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
   // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
