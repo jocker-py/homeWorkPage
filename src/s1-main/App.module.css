@@ -5,6 +5,7 @@
 
 .hw {
     padding: 24px 70px 32px;
+    min-height: 336px;
 }
 
 .hwTitle {
