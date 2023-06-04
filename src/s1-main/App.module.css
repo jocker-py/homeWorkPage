@@ -15,3 +15,7 @@
     line-height: 27px;
     padding: 36px 70px 10px;
 }
+
+hr {
+    opacity: 0.5;
+}
