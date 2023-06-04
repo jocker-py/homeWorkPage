@@ -1,3 +1,10 @@
 .loader {
-    /*свг и/или анимация*/
+    width: 90px;
+    height: 90px;
+}
+
+.loaderSvg {
+    margin: auto;
+    background: transparent;
+    display: block;
 }
