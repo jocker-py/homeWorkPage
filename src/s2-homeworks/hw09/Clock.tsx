@@ -38,7 +38,7 @@ function Clock() {
 
   // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
   const stringDay = formatDate.getLongDay(date) || <br/>; // пишут студенты
-  const stringMonth = formatDate.getLongMonth(date)  || <br/>; // пишут студенты
+  const stringMonth = formatDate.getLongMonth(date) || <br/>; // пишут студенты
 
   return (
     <div className={s.clock}>
@@ -72,14 +72,14 @@ function Clock() {
       <div className={s.buttonsContainer}>
         <SuperButton
           id={"hw9-button-start"}
-          disabled={true} // пишут студенты // задизэйблить если таймер запущен
+          disabled={!!timerId} // пишут студенты // задизэйблить если таймер запущен
           onClick={start}
         >
           start
         </SuperButton>
         <SuperButton
           id={"hw9-button-stop"}
-          disabled={true} // пишут студенты // задизэйблить если таймер не запущен
+          disabled={!timerId} // пишут студенты // задизэйблить если таймер не запущен
           onClick={stop}
         >
           stop
