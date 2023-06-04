@@ -1,6 +1,11 @@
 const formatDate = {
   getDoubleDotDate(date: Date): string {
-    return date.toLocaleTimeString();
+    return date.toLocaleString("en", {
+      hour12: false,
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    });
   },
   getDotDate(date: Date): string {
     return date.toLocaleDateString("ru");
