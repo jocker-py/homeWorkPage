@@ -8,7 +8,7 @@ const SuperRange: React.FC<SliderProps> = (props) => {
 export default SuperRange;
 
 const PrettoSlider = styled(Slider)({
-  width: "60%",
+  width: "147px",
   color: "#52af77",
   height: 4,
   "& .MuiSlider-track": {
@@ -18,7 +18,7 @@ const PrettoSlider = styled(Slider)({
     height: 18,
     width: 18,
     backgroundColor: "#fff",
-    border: "2px solid currentColor",
+    border: "1px solid currentColor",
     "&:focus, &:hover, &.Mui-active, &.Mui-focusVisible": {
       boxShadow: "inherit",
     },
