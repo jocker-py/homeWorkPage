@@ -19,5 +19,13 @@ html {
 }
 
 .select {
+    background-color: var(--background);
+    border-color: var(--color);
+    color: inherit;
+    height: 36px;
+    padding: 6px 6px 6px 10px;
+}
 
+.select:focus, .select:active {
+    border-color: var(--color);
 }
