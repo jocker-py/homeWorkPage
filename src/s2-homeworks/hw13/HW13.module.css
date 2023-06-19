@@ -1,22 +1,62 @@
 .buttonsContainer {
+    display: flex;
+    gap: 24px;
+    margin: 8px 0 40px;
 }
 
 .responseContainer {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
 }
 
 .imageContainer {
 }
 
 .image {
+    width: 450px;
+    height: 300px;
 }
 
-.textContainer{
+.textContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .code {
+    font-weight: 600;
+    font-size: 30px;
 }
 
 .text {
+    font-weight: 500;
+    font-size: 16px;
 }
+
 .info {
+    position: absolute;
+    font-weight: 600;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: changeOpacity 1.5s linear infinite;
+}
+
+@keyframes changeOpacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
