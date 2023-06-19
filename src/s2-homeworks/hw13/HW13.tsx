@@ -18,29 +18,24 @@ const CODE_400 = "Ошибка 400!";
 const CODE_500 = "Ошибка 500!";
 const CODE_UNKNOWN = "Error!";
 
-const TEXT_200 = [
-  "...всё ок) ",
-  "код 200 - обычно означает что скорее всего всё ок)",
-];
-const TEXT_500 = [
-  "эмитация ошибки на сервере",
-  "ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)",
-];
-const TEXT_400 = [
-  "Ты не отправил success в body вообще!",
-  "ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!",
-];
-const TEXT_UNKNOWN = ["Network Error", "AxiosError"];
+const TEXT_200 = "...всё ок)";
+const TEXT_500 = "эмитация ошибки на сервере";
+const TEXT_400 = "Ты не отправил success в body вообще!";
+const TEXT_UNKNOWN = "Network Error";
 
+const INFO_200 = "код 200 - обычно означает что скорее всего всё ок)";
+const INFO_400 = "ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!";
+const INFO_500 = "ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)";
+const INFO_UNKNOWN = "AxiosError";
+
+const LOADING = "...loading";
 
 const HW13 = () => {
   const [code, setCode] = useState("");
-  const [text, setText] = useState<string[]>([]);
+  const [text, setText] = useState("");
   const [info, setInfo] = useState("");
   const [image, setImage] = useState("");
-
-  const mappedText = text.map((item, idx) => <div key={idx}>{item}</div>);
-
+  const disabled = info === LOADING;
   const send = (x?: boolean | null) => () => {
     const url =
       x === null
@@ -49,8 +44,8 @@ const HW13 = () => {
 
     setCode("");
     setImage("");
-    setText([]);
-    setInfo("...loading");
+    setText("");
+    setInfo(LOADING);
 
     axios
       .post(url, {success: x})
@@ -60,6 +55,7 @@ const HW13 = () => {
           setImage(success200);
           // дописать
           setText(TEXT_200);
+          setInfo(INFO_200);
         } else {
           throw new Error();
         }
@@ -70,19 +66,20 @@ const HW13 = () => {
         if (status === 500) {
           setCode(CODE_500);
           setText(TEXT_500);
+          setInfo(INFO_500);
           setImage(error500);
         } else if (status === 400) {
           setCode(CODE_400);
           setText(TEXT_400);
+          setInfo(INFO_400);
           setImage(error400);
         } else {
           setCode(CODE_UNKNOWN);
           setText(TEXT_UNKNOWN);
+          setInfo(INFO_UNKNOWN);
           setImage(errorUnknown);
         }
-      }).finally(() => {
-      setInfo("");
-    });
+      });
   };
 
   return (
@@ -96,7 +93,7 @@ const HW13 = () => {
             onClick={send(true)}
             xType={"secondary"}
             // дописать
-            disabled={!!info}
+            disabled={disabled}
           >
             Send true
           </SuperButton>
@@ -105,7 +102,7 @@ const HW13 = () => {
             onClick={send(false)}
             xType={"secondary"}
             // дописать
-            disabled={!!info}
+            disabled={disabled}
           >
             Send false
           </SuperButton>
@@ -114,7 +111,7 @@ const HW13 = () => {
             onClick={send(undefined)}
             xType={"secondary"}
             // дописать
-            disabled={!!info}
+            disabled={disabled}
           >
             Send undefined
           </SuperButton>
@@ -123,7 +120,7 @@ const HW13 = () => {
             onClick={send(null)} // имитация запроса на не корректный адрес
             xType={"secondary"}
             // дописать
-            disabled={!!info}
+            disabled={disabled}
           >
             Send null
           </SuperButton>
@@ -139,7 +136,7 @@ const HW13 = () => {
               {code}
             </div>
             <div id={"hw13-text"} className={s.text}>
-              {mappedText}
+              {text}
             </div>
             <div id={"hw13-info"} className={s.info}>
               {info}
