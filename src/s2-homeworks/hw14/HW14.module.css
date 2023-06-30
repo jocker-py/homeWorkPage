@@ -1,7 +1,17 @@
 .tech {
-
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
 }
 
 .loading {
-
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4D4D4D;
+    margin-top: 11px;
+    margin-left: 421px;
 }
