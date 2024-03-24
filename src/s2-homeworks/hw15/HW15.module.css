@@ -1,27 +1,76 @@
 .tech {
-    width: 50vw;
+    width: 50%;
+    font-family: Roboto, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .developer {
-
+    width: 50%;
+    text-transform: capitalize;
+    font-family: Roboto, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
-.techHeader {
-    width: 50vw;
-}
-
-.developerHeader {
-
+.techHeader, .developerHeader {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 50%;
+    text-transform: capitalize;
+    font-family: Roboto, arial, helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .row {
     display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 12px 17px;
 }
 
 .rowHeader {
     display: flex;
+    font-weight: 600;
+    background-color: #E5E5E5;
+    margin-top: 36px;
+    padding: 11px 17px 9px;
+    justify-content: flex-start;
+}
+
+.separator {
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.container {
+    position: relative;
+    max-width: 606px;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,.5);
+    pointer-events: none;
 }

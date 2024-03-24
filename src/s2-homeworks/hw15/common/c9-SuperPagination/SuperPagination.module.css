@@ -1,11 +1,35 @@
 .pagination {
     display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.select {
+    margin-left: 6px;
+    margin-right: 10px;
+    min-width: 39px;
+    width: max-content;
+
+    font-family: Roboto, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .text1 {
-
+    margin-left: 24px;
+    text-transform: capitalize;
+    font-family: Roboto, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .text2 {
 
+
+    font-family: Roboto, arial, helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
 }
